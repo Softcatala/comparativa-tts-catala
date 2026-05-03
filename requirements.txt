@@ -1,0 +1,4 @@
+git+https://github.com/coqui-ai/TTS@a01ca653925973fcf04b0923b03ca9568a86046f#egg=TTS
+gradio==3.37.0
+espeak-phonemizer>=1.1.0,<2 
+onnxruntime~=1.11.0
