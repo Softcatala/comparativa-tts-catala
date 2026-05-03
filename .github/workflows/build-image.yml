@@ -17,10 +17,9 @@ jobs:
 
       - name: Pull models from HuggingFace space (LFS)
         run: |
-          git clone --no-checkout https://huggingface.co/spaces/softcatala/comparativa-tts-catala /tmp/hf-space
+          GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/spaces/softcatala/comparativa-tts-catala /tmp/hf-space
           cd /tmp/hf-space
-          git lfs install
-          git lfs pull --include="models/**"
+          git lfs pull --include="models/"
           cp -r models $GITHUB_WORKSPACE/models
 
       - name: Log in to GHCR
